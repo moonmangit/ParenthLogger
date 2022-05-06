@@ -1,0 +1,14 @@
+{
+    "name": "ParenthLogger",
+    "version": "1.0.0",
+    "description": "ParenthLogger use to color stream serial monitor and string format.",
+    "keywords": "monitor, color, printf, string, format, ansi",
+    "authors": [
+        {
+            "name": "Moon Man",
+            "email": "seagame.std@gmail.com"
+        }
+    ],
+    "frameworks": "*",
+    "platforms": "*"
+}
