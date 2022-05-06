@@ -1,14 +1,22 @@
 {
     "name": "ParenthLogger",
-    "version": "1.0.0",
-    "description": "ParenthLogger use to color stream serial monitor and string format.",
-    "keywords": "monitor, color, printf, string, format, ansi",
+    "version": "1.0.1",
+    "description": "Streaming string, format and colorize serial monitor with ANSI escape color in parenthesis() way.",
+    "keywords": "text, stream, monitor, color, printf, string, format, ansi",
     "authors": [
         {
             "name": "Moon Man",
             "email": "seagame.std@gmail.com"
         }
     ],
-    "frameworks": "*",
-    "platforms": "*"
+    "frameworks": "arduino",
+    "platforms": [
+        "atmelavr",
+        "espressif32",
+        "espressif8266"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/moonmangit/ParenthLogger.git"
+    }
 }
