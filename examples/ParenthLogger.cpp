@@ -1,16 +1,18 @@
 #include <ParenthLogger.h>
 
-int number1 = 10;
-float float1 = 3.14;
-double double1 = 123.4125123;
-const char *string1 = "Hello World";
-bool bool1 = true;
+using namespace ansi_style;
 
-// normal use-case
-void my_function() {
-    plog("\n")("Hello")("World: ")(string1); // => \nHelloWolrd: HelloWorld
-    plog("\n> Number-1 : < ", blue)(number1, green)(" >");
-    plog.use("\n> Number-1 : < %i >", blue)(number1, green);
-    plog(V2CSTR(string1))(":")(string1, Colors::red);
-    plog("this is bool1 in string form : ")(B2CSTR(bool1)); // this is bool1 in string form : true
+ParenthLogger plog(blue_italic, true);
+
+void setup()
+{
+    Serial.begin(9600);
+    plog("\ncurrent time is ")(":")(__TIME__);
+    plog.useFormat("\nTest Pi Value => %i * %i = %i", yellow_italic)
+        .f(PI)
+        .f(2)
+        .f(PI * 2, red);
+    plog(F("Hello this is long text, you need to use F() to reduce memory usage"), green);
 }
+
+void loop() {}
